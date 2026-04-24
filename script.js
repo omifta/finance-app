@@ -4,7 +4,7 @@
 const utils = {
   toNumber: (v) => Number(v) || 0,
   toRupiah: (v) => `Rp. ${v.toLocaleString()}`,
-  toUSD: () => {},
+  toUSD: () => { },
 };
 
 // Model Object : Transaksi
@@ -36,6 +36,11 @@ const Finance = (() => {
     if (trx.type === "saving") {
       saving += trx.amount;
       balance -= trx.amount;
+    }
+
+    if (trx.type === "withdrawal") {
+      saving -= trx.amount;
+      balance += trx.amount;
     }
 
     updateCategory(trx);
