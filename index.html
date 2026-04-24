@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aplikasi Batch Rep</title>
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <h1>Aplikasi Pecatatan Keuangan</h1>
+
+    <form id="form">
+      <label>Jenis Transaksi :</label>
+      <select id="type">
+        <option value="income">Pemasukan</option>
+        <option value="expense">Pengeluaran</option>
+        <option value="saving">Menabung</option>
+      </select>
+
+      <br />
+      <br />
+
+      <label>Jumlah Uang : </label>
+      <input id="amount" placeholder="Contoh : 50000" />
+
+      <br />
+      <br />
+
+      <label>Kategori : </label>
+      <input id="category" placeholder="Contoh : Makanan, Gaji, Tabungan" />
+
+      <br />
+      <br />
+
+      <button type="submit">Tambah Data</button>
+    </form>
+
+    <hr />
+    <h2>Saldo saat ini : <span id="balance">Rp0</span></h2>
+    <h2>Total Tabungan : <span id="saving">Rp0</span></h2>
+
+    <h2>Daftar Transaksi :</h2>
+    <ul id="list"></ul>
+  </body>
+</html>
